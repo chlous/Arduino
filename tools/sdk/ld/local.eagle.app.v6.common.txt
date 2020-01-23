@@ -1,0 +1,15 @@
+Had to compile eagle.app.v6.common.ld.h manually, since there always was a compilation error:
+
+"{compiler.path}{compiler.c.cmd}" -CC -E -P {build.vtable_flags} "{runtime.platform.path}/tools/sdk/ld/eagle.app.v6.common.ld.h" -o "{build.path}/local.eagle.app.v6.common.ld"
+
+On my machine that was
+{compiler.path}=D:\Development\Devices\Arduino15\packages\esp8266\hardware\esp8266\2.5.0/tools/xtensa-lx106-elf/bin/
+{compiler.c.cmd}=xtensa-lx106-elf-gcc
+{build.vtable_flags}=-DVTABLES_IN_FLASH
+{runtime.platform.path}=D:\Development\Devices\Arduino15\packages\esp8266\hardware\esp8266\2.5.0
+
+"D:\Development\Devices\Arduino15\packages\esp8266\hardware\esp8266\2.5.0/tools/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc" -CC -E -P -DVTABLES_IN_FLASH "D:\Development\Devices\Arduino15\packages\esp8266\hardware\esp8266\2.5.0/tools/sdk/ld/eagle.app.v6.common.ld.h" -o "C:\Users\Klaus\AppData\Local\Temp\VMBuilds\cello\esp8266_generic\Debug/local.eagle.app.v6.common.ld"
+
+than copied the local.eagle.app.v6.common.ld to D:\Development\Devices\Arduino15\packages\esp8266\hardware\esp8266\2.5.0/tools/sdk/ld/
+
+tkl/26.03.2019
